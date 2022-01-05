@@ -1,2 +1,4 @@
 # SE-GNN
-Semantic Evidence aware Graph Neural Network (SE-GNN) for Knowledge Graph Embedding.
+Implementation of AAAI'22 paper "How Does Knowledge Graph Embedding Extrapolate to Unseen Data: a Semantic Evidence View".
+
+Souce code will be updated asap.
