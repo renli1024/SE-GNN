@@ -1,0 +1,27 @@
+# @package _global_
+
+dataset: WN18RR
+
+epoch: 800
+batch_size: 256
+learning_rate: 1.5e-3
+h_dim: 200
+pred_rel_w: True
+label_smooth: 0.1
+
+# graph
+kg_layer: 1
+rm_rate: 0.5
+ent_drop: 0.2
+rel_drop: 0
+comp_op: mul  # add/mul
+bn: True
+
+# ConvE
+k_h: 10
+k_w: 20
+ent_drop_pred: 0.3
+conv_drop: 0.1
+fc_drop: 0.4
+ker_sz: 7
+out_channel: 250

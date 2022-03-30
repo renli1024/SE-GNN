@@ -1,0 +1,25 @@
+defaults:
+  - dataset: FB15k_237
+  - _self_
+
+dataset_list: [FB15k_237, WN18RR]
+
+device: 0  # gpu 0/1/2..
+max_no_improve: 50  # early stopping epoch num
+cpu_worker_num: 10  # thread num when loading data
+warmup_epoch: 5
+
+# project directory
+project_dir: /home/lirenn/project/SE-GNN
+# dataset directory
+dataset_dir: ${project_dir}/data/dataset
+# output directory for each dataset
+output_dir: ${project_dir}/data/output/${dataset}
+
+# output directory for each run, formatted in time "YYYY-MM-DD/HH-MM-SS"
+hydra:
+  run:
+    dir: ${output_dir}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: ${output_dir}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.override_dirname}

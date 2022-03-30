@@ -1,0 +1,27 @@
+# @package _global_
+
+dataset: FB15k_237
+
+epoch: 600
+batch_size: 1024
+learning_rate: 3.5e-4
+h_dim: 450
+pred_rel_w: False
+label_smooth: 0.1
+
+# graph
+kg_layer: 2
+rm_rate: 0.5  # randomly removing training edges
+ent_drop: 0.3
+rel_drop: 0.1
+comp_op: mul   # add/mul
+bn: False  # batchnorn
+
+# ConvE
+k_h: 15
+k_w: 30
+conv_drop: 0.3
+ent_drop_pred: 0.3
+fc_drop: 0.5
+ker_sz: 8
+out_channel: 200
