@@ -47,10 +47,10 @@ python code/run.py dataset=WN18RR
 # 2. Pass the value by command-line, like:
 # python code/run.py dataset=WN18RR rel_drop=0.2 ...
 
-# draw the FB15k-237 pictures (Figure 2 and 4 of paper)
+# draw the FB15k-237 pictures (paper Figure 2)
 python drawing/data_analyse.py
 
-# draw the WN18RR pictures (Figure 6 of paper)
+# draw the WN18RR pictures (paper Figure 6)
 python drawing/data_analyse.py dataset=WN18RR
 ``` 
 
