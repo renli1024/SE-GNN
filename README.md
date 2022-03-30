@@ -33,10 +33,12 @@ to Unseen Data: a Semantic Evidence View](https://arxiv.org/pdf/2109.11800.pdf) 
 ## Model Training
 ```shell script
 # enter the project directory
-cd SE-GNN
+cd SE-GNN-main
+
+# set the config/config.yaml `project_dir` field to your own project path
 
 # FB15k-237
-python code/run.py 
+python code/run.py
 
 # WN18RR
 python code/run.py dataset=WN18RR

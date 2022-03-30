@@ -10,7 +10,7 @@ cpu_worker_num: 10  # thread num when loading data
 warmup_epoch: 5
 
 # project directory
-project_dir: /home/lirenn/project/SE-GNN
+project_dir: your_path/SE-GNN-main
 # dataset directory
 dataset_dir: ${project_dir}/data/dataset
 # output directory for each dataset
