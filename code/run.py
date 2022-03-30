@@ -36,12 +36,13 @@ def save_model(model, save_variables):
 
 def get_linear_scheduler_with_warmup(optimizer, warmup_steps: int, max_steps: int):
     """
-    Create a schedule with a learning rate that decreases linearly after
+    Create scheduler with a learning rate that decreases linearly after
     linearly increasing during a warmup period.
     """
     def lr_lambda(current_step):
         """
-        Compute a ratio according to current step, by which the optimizer's lr will be mutiplied.
+        Compute a ratio according to current step,
+        by which the optimizer's lr will be mutiplied.
         :param current_step:
         :return:
         """
@@ -80,10 +81,10 @@ def main(config: DictConfig):
     cfg = utils.get_global_config()
     assert cfg.dataset in cfg.dataset_list
 
-    # remove the randomness
+    # remove randomness
     utils.remove_randomness()
 
-    # print the configuration
+    # print configuration
     logging.info('\n------Config------\n {}'.format(utils.filter_config(cfg)))
 
     # backup the code and configuration
@@ -101,7 +102,7 @@ def main(config: DictConfig):
     model = SE_GNN(cfg.h_dim)
     model = model.to(device)
 
-    # load the aggregation graph
+    # load the knowledge graph
     src, dst, rel, hr2eid, rt2eid = construct_kg('train', directed=False)
     kg = get_kg(src, dst, rel, device)
     kg_out_deg = kg.out_degrees(torch.arange(kg.number_of_nodes(), device=device))

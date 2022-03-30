@@ -6,7 +6,7 @@ from data_helper import BiDataloader, EvalDataset
 
 def train_step(model, data, kg, optimizer, scheduler):
     """
-    A single train step. Apply back-propation and return the loss
+    A single train step. Apply back-propation and return the loss.
     :param model:
     :param data:
     :param kg:

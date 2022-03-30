@@ -14,7 +14,7 @@ import math
 
 def construct_dict(dir_path):
     """
-    construct the entity / relation dict
+    construct the entity, relation dict
     :param dir_path: data directory path
     :return:
     """
